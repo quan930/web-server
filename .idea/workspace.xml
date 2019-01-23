@@ -3,17 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f55f147d-90ac-4591-a788-9586ed96a2cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/mrquan/ApacheServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/mrquan/ApacheServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/mrquan/HttpExchange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/mrquan/HttpExchange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/mrquan/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/mrquan/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/Test1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/mrquan/ApacheServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/mrquan/ApacheServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/mrquan/HttpExchange$RequestLine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/mrquan/HttpExchange$RequestLine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/mrquan/HttpExchange$ResponseLine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/mrquan/HttpExchange$ResponseLine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/mrquan/HttpExchange.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/mrquan/HttpExchange.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/mrquan/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/mrquan/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/mrquan/Test1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/mrquan/Test1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/mrquan/Test1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/mrquan/Test1.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -109,7 +98,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/HttpExchange.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
+            <state relative-caret-position="795">
               <caret line="154" column="5" lean-forward="true" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
               <folding>
                 <element signature="method#HttpExchange#0;class#HttpExchange#0" />
@@ -373,12 +362,12 @@
       <workItem from="1547348940708" duration="58000" />
       <workItem from="1547386336631" duration="834000" />
       <workItem from="1547626348042" duration="30938000" />
-      <workItem from="1548242403308" duration="5433000" />
+      <workItem from="1548242403308" duration="5962000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40593000" />
+    <option name="totallyTimeSpent" value="41122000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -615,7 +604,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/HttpExchange.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
+        <state relative-caret-position="795">
           <caret line="154" column="5" lean-forward="true" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
           <folding>
             <element signature="method#HttpExchange#0;class#HttpExchange#0" />
