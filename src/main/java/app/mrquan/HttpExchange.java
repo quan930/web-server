@@ -14,49 +14,30 @@ public class HttpExchange implements Runnable{
     private Headers responseHeaders;//响应头
     private byte[] requestEntityBody;//请求实体
     private byte[] responseEntityBody;//响应实体
+    private String filePath;//文件路径
     private HttpHandler handler;
-    public HttpExchange(Socket socket, HttpHandler handler) {
+    public HttpExchange(Socket socket, HttpHandler handler,String filePath) {
         this.socket = socket;
         this.handler = handler;
+        this.filePath = filePath;
     }
-    public byte[] getRequestEntityBody() {
-        return requestEntityBody;
-    }
-    public Headers getRequestHeaders() {
-        return requestHeaders;
-    }
-    public RequestLine getRequestLine() {
-        return requestLine;
-    }
-    public void setResponseLine(ResponseLine responseLine) {
-        this.responseLine = responseLine;
-    }
-    public void setResponse(ResponseLine responseLine,Headers responseHeaders,byte[] responseEntityBody){
-        this.responseLine = responseLine;
-        this.responseHeaders = responseHeaders;
-        this.responseEntityBody = responseEntityBody;
-    }
-    private void init1() throws IOException {
-        in = socket.getInputStream();
-        out = socket.getOutputStream();
-        requestHeaders = new Headers();
-        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-        requestLine = new RequestLine(reader.readLine());//请求行
-        String m;
-        while ((m = reader.readLine()).length()!=0){
-            requestHeaders.set(m.substring(0,m.indexOf(": ")),m.substring(m.indexOf(": ")+2));
-            //请求头
-        }
-        if (requestHeaders.get("Content-Length")!=null){
-            System.out.println(requestHeaders.get("Content-Length").get(0));
-            byte requestBody[] = new byte[Integer.parseInt(requestHeaders.get("Content-Length").get(0))];
-            System.out.println(in.read(requestBody,0,requestBody.length));
-            String s = new String(requestBody);
-            System.out.println("aaaaaa"+s);
+    public void run() {
+        try {
+            init();//请求
+            handler.handle(this);//响应回调
+            response();
+            /*
+             * 发送报文
+             */
+            in.close();
+            out.close();
+            socket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
     /**
-     * 读取请求 可封装流
+     * 请求 可封装流
      * @throws IOException
      */
     private void init() throws IOException{
@@ -106,27 +87,71 @@ public class HttpExchange implements Runnable{
             requestEntityBody = requestBody;
         }
     }
-    public void run() {
+
+    /**
+     * 响应
+     * @throws IOException
+     */
+    private void response() throws IOException {
+        File file = new File(filePath+requestLine.requestURL);
+        if (file.isDirectory()){
+            file = new File(filePath+requestLine.requestURL+"/index.html");
+        }
+        if (file.exists()){//判断请求是否存在
+            responseLine = new ResponseLine("HTTP/1.0","200","OK");
+            responseHeaders = new Headers();
+            responseHeaders.add("Content-Length",String.valueOf(file.length()));
+            responseEntityBody = getBytes(file);
+        }else {//404
+            File file1 = new File(filePath+"/404.html");
+            if (file1.exists()){//判断请求是否存在
+                responseLine = new ResponseLine("HTTP/1.0","404","Not Found");
+                responseHeaders = new Headers();
+                responseHeaders.add("Content-Length",String.valueOf(file1.length()));
+                responseEntityBody = getBytes(file1);
+            }
+        }
+        out.write(responseLine.toLine().getBytes());
+        out.write("\r\n".getBytes());
+        out.write(responseHeaders.format().getBytes());
+        out.write("\r\n\r\n".getBytes());
+        out.write(responseEntityBody);
+        out.flush();
+    }
+
+    /**
+     * 文件转字节
+     * @param file 文件
+     * @return 字节数组
+     */
+    private byte[] getBytes(File file){
+        byte[] buffer = null;
         try {
-            init();//请求
-            handler.handle(this);//响应回调
-            /**
-             * 发送报文
-             */
-            out.write(responseLine.toLine().getBytes());
-            out.write("\r\n".getBytes());
-            out.write(responseHeaders.format().getBytes());
-            out.write("\r\n\r\n".getBytes());
-            out.write(responseEntityBody);
-            in.close();
-            out.close();
-            socket.close();
-//            socket.getInputStream().close();
-//            socket.getOutputStream().close();
-//            socket.close();
+            FileInputStream fis = new FileInputStream(file);
+            ByteArrayOutputStream bos = new ByteArrayOutputStream(1000);
+            byte[] b = new byte[1000];
+            int n;
+            while ((n = fis.read(b)) != -1) {
+                bos.write(b, 0, n);
+            }
+            fis.close();
+            bos.close();
+            buffer = bos.toByteArray();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return buffer;
+    }
+    public byte[] getRequestEntityBody() {
+        return requestEntityBody;
+    }
+    public Headers getRequestHeaders() {
+        return requestHeaders;
+    }
+    public RequestLine getRequestLine() {
+        return requestLine;
     }
 
     class RequestLine{//请求行
@@ -139,7 +164,7 @@ public class HttpExchange implements Runnable{
         }
         @Override
         public String toString() {
-            return "请求行\t" + "method=" + method +",url=" + requestURL + ",version=" + version;
+            return "Request Line\t" + "method=" + method +",url=" + requestURL + ",version=" + version;
         }
         public String getVersion() {
             return version;
@@ -163,12 +188,12 @@ public class HttpExchange implements Runnable{
             version = requestLine[2];
         }
     }
-    public static class ResponseLine{
+    class ResponseLine{
         private String version;//版本
         private String statusCode;//状态码
         private String reasonPhrase;//原因短语
 
-        public ResponseLine(String version, String statusCode, String reasonPhrase) {
+        ResponseLine(String version, String statusCode, String reasonPhrase) {
             this.version = version;
             this.statusCode = statusCode;
             this.reasonPhrase = reasonPhrase;
@@ -177,4 +202,5 @@ public class HttpExchange implements Runnable{
             return version+" "+statusCode+" "+reasonPhrase;
         }
     }
+
 }

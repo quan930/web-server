@@ -18,10 +18,11 @@ public class ApacheServer {
     private ExecutorService executorService;
     private ServerSocket serverSocket;
 
-    public ApacheServer(int port,String context,HttpHandler handler) {
+    public ApacheServer(int port,String context,String htmlPath,HttpHandler handler) {
         this.port = port;
         this.context = context;
         this.handler = handler;
+        this.htmlPath = htmlPath;
     }
 
     public void start(){
@@ -29,7 +30,7 @@ public class ApacheServer {
             executorService = Executors.newFixedThreadPool(30);
             serverSocket = new ServerSocket(port);
             while (true){
-                executorService.execute(new HttpExchange(serverSocket.accept(),handler));//线程池 执行线程
+                executorService.execute(new HttpExchange(serverSocket.accept(),handler,htmlPath));//线程池 执行线程
             }
         }catch (SocketException ignored){
 //            System.out.println("关闭登陆服务器");
