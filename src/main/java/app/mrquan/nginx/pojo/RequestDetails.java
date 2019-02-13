@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Objects;
 
 /**
- * 请求详情
+ * 请求详情 记录请求次数 是否缓存 响应报文 (适合静态资源)
  */
 public class RequestDetails {
     private Integer number;//请求次数

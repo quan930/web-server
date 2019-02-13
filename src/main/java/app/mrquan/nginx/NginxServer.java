@@ -5,10 +5,7 @@ import app.mrquan.nginx.pojo.RequestLine;
 
 import java.io.IOException;
 import java.net.ServerSocket;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -34,14 +31,13 @@ public class NginxServer {
         this.callback = callback;
     }
     public void start(){
-//        if (port==serverPort){
-//            try {
-//                throw new Exception("端口重复");
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//        }
-
+        if (port==serverPort){
+            try {
+                throw new Exception("端口重复");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
         new Thread(()->{
             try {
                 map = new ConcurrentHashMap<>();

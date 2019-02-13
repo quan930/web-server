@@ -30,10 +30,7 @@ public class HttpExchange implements Runnable{
         try {
             init();//请求
             handler.handle(this);//响应回调
-            response();
-            /*
-             * 发送报文
-             */
+            response();//响应 发送报文
             socket.shutdownOutput();
             socket.shutdownInput();
 //            out.close();

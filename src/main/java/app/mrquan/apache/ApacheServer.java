@@ -14,6 +14,14 @@ public class ApacheServer {
     private ExecutorService executorService;
     private ServerSocket serverSocket;
 
+    /**
+     * 创建服务器
+     * @param port 端口号
+     * @param context 环境上下文
+     * @param htmlPath 资源文件路径(html等)
+     * @param handler 回调函数
+     * @return ApacheServer对象
+     */
     public static ApacheServer create(int port,String context,String htmlPath,HttpHandler handler){
         return new ApacheServer(port,context,htmlPath,handler);
     }
@@ -25,6 +33,9 @@ public class ApacheServer {
         this.htmlPath = htmlPath;
     }
 
+    /**
+     * 启动apache服务器
+     */
     public void start(){
         new Thread(()->{
             try {
