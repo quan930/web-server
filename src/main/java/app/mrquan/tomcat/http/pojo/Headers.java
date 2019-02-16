@@ -1,14 +1,17 @@
-package app.mrquan.apache;
+package app.mrquan.tomcat.http.pojo;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * 请求响应头
  */
 public class Headers extends HashMap<String,List<String>> {
-    void set (String key,String value){
+    public void set (String key,String value){
 //        System.out.println("key:"+key+"\t"+"value:"+value);
-        List<String> list = new ArrayList<String>();
+        List<String> list = new ArrayList<>();
         Collections.addAll(list, value.split(",[^ ]"));
 //        System.out.println(list);
         put(key,list);
@@ -21,7 +24,6 @@ public class Headers extends HashMap<String,List<String>> {
     }
     public String format(){
         StringBuilder stringBuilder = new StringBuilder();
-        int m = 0;
         for ( Entry<String,List<String>> entry:entrySet()){
             stringBuilder.append(entry.getKey());
             stringBuilder.append(": ");
@@ -30,10 +32,7 @@ public class Headers extends HashMap<String,List<String>> {
                 stringBuilder.append(", ");
             }
             stringBuilder.append(entry.getValue().get(entry.getValue().size()-1));
-            m++;
-            if (m<size()){
-                stringBuilder.append("\n");
-            }
+            stringBuilder.append("\n");
         }
         return stringBuilder.toString();
     }

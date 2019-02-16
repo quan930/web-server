@@ -29,6 +29,7 @@ public class Headers extends HashMap<String,List<String>> {
      */
     public String format(){
         StringBuilder stringBuilder = new StringBuilder();
+        int m = 0;
         for ( Entry<String,List<String>> entry:entrySet()){
             stringBuilder.append(entry.getKey());
             stringBuilder.append(": ");
@@ -37,6 +38,10 @@ public class Headers extends HashMap<String,List<String>> {
                 stringBuilder.append(", ");
             }
             stringBuilder.append(entry.getValue().get(entry.getValue().size()-1));
+            m++;
+            if (m<size()){
+                stringBuilder.append("\n");
+            }
         }
         return stringBuilder.toString();
     }
