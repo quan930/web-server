@@ -39,10 +39,6 @@ public class RequestLine {
         return className;
     }
 
-//    public String toLine(){
-//        return method+" "+requestURL+" "+version;
-//    }
-
     @Override
     public String toString() {
         return "RequestLine{" +
@@ -67,7 +63,7 @@ public class RequestLine {
             queryString = "";
         }
         int m = simpleRUL.indexOf(context);//相对路径
-        if(m!=-1) {//切割
+        if(m==0) {//切割
             className = simpleRUL.substring(m+context.length());
         }else {
             className = simpleRUL;

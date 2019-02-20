@@ -4,7 +4,7 @@ import app.mrquan.tomcat.TomcatServer;
 
 public class TomcatTest {
     public static void main(String[] args) {
-        TomcatServer tomcatServer = TomcatServer.create(7777,"/quan");
+        TomcatServer tomcatServer = TomcatServer.create(7777,"/quan","web");
         tomcatServer.start();
     }
 }

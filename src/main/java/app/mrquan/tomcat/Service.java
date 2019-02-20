@@ -1,10 +1,12 @@
 package app.mrquan.tomcat;
 
 
+import app.mrquan.tomcat.config.DisplayPage;
 import app.mrquan.tomcat.http.*;
 import app.mrquan.tomcat.http.pojo.Headers;
 import app.mrquan.tomcat.http.pojo.RequestLine;
 import app.mrquan.tomcat.http.pojo.ResponseLine;
+import app.mrquan.tomcat.util.FileIO;
 import app.mrquan.tomcat.util.NewInstanceRequestResponse;
 
 import java.io.*;
@@ -17,21 +19,23 @@ public class Service implements Runnable {
     private String context;//上下文环境
     private Map<String,String> servletMappingMap;//映射关系
     private ConcurrentHashMap<String,Servlet> servletMap;//servlet容器
+    private String staticResourcePath;//静态资源
     private InputStream in;
     private OutputStream out;
 
-    public Service(Socket socket, String context, Map<String, String> servletMappingMap, ConcurrentHashMap<String, Servlet> servletMap) {
+    public Service(Socket socket, String context, Map<String, String> servletMappingMap, ConcurrentHashMap<String, Servlet> servletMap,String staticResourcePath) {
         this.socket = socket;
         this.context = context;
         this.servletMappingMap = servletMappingMap;
         this.servletMap = servletMap;
+        this.staticResourcePath = staticResourcePath;
     }
 
     @Override
     public void run() {
         try {
             in = socket.getInputStream();
-            out = socket.getOutputStream();
+            out = new BufferedOutputStream(socket.getOutputStream());
             RequestLine requestLine = requestLine();//读取请求行
 //            System.out.println("..................."+requestLine);
             String className = servletMappingMap.get(requestLine.getClassName());
@@ -39,9 +43,34 @@ public class Service implements Runnable {
                 /**
                  * 404
                  */
-                System.out.println("404"+"\t"+requestLine.getRequestURL());
-            }else {
-                System.out.println(requestLine);
+                ResponseLine responseLine = null;
+                Headers responseHeaders = null;
+                byte[] responseEntityBody = null;
+                File file = new File(staticResourcePath+requestLine.getClassName());
+                if (file.isDirectory()){
+                    file = new File(staticResourcePath+requestLine.getClassName()+"/index.html");
+                }
+                if (file.exists()){//判断请求是否存在
+                    responseLine = new ResponseLine("HTTP/1.0","200","OK");
+                    responseHeaders = new Headers();
+                    responseHeaders.add("Content-Length",String.valueOf(file.length()));
+                    responseEntityBody = FileIO.getBytes(file);
+                }else {//404
+//                    System.out.println("文件不存在"+file);
+//                    System.out.println(requestLine);
+                    responseLine = new ResponseLine("HTTP/1.0","404","Not Found");
+                    responseHeaders = new Headers();
+                    responseHeaders.add("Content-Length",String.valueOf(DisplayPage.Code404.getBytes().length));
+                    responseEntityBody = DisplayPage.Code404.getBytes();
+                }
+                out.write(responseLine.toLine().getBytes());
+                out.write("\r\n".getBytes());
+                out.write(responseHeaders.format().getBytes());
+                out.write("\r\n".getBytes());
+                out.write(responseEntityBody);
+                out.flush();
+            }else {//servlet逻辑
+//                System.out.println(requestLine);
                 if (servletMap.get(className)==null){//容器中没有指定servlet
                     Servlet servlet = Class.forName(className).asSubclass(Servlet.class).newInstance();
                     servlet.init();
@@ -67,11 +96,11 @@ public class Service implements Runnable {
                 servletMap.get(className).service(httpServletRequest,httpServletResponse);
                 //设置响应
                 response(responseLine,responseHeaders,httpServletRequest.getInputStream(),outputStream);
-                //释放资源
-                socket.shutdownOutput();
-                socket.shutdownInput();
-                socket.close();
             }
+            //释放资源
+            socket.shutdownOutput();
+            socket.shutdownInput();
+            socket.close();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
@@ -156,11 +185,10 @@ public class Service implements Runnable {
         inputStream.close();//关闭内存流
         outputStream.flush();
         outputStream.close();//关闭内存流
-
         out.write(responseLine.toLine().getBytes());
         out.write("\r\n".getBytes());
         out.write(responseHeaders.format().getBytes());
-        out.write("\r\n\r\n".getBytes());
+        out.write("\r\n".getBytes());
         out.write(outputStream.toByteArray());
         out.flush();
     }

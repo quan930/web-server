@@ -115,7 +115,7 @@ public class NewInstanceRequestResponse {
 
             @Override
             public void setContentLength(int length) {
-                responseHeaders.set("Content-Length",Integer.toString(length+2));
+                responseHeaders.set("Content-Length",Integer.toString(length));
             }
         };
     }

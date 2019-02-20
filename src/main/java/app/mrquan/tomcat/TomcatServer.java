@@ -16,6 +16,7 @@ public class TomcatServer {
     private ServerSocket serverSocket;
     private Map<String,String> servletMappingMap;//映射关系
     private ConcurrentHashMap<String,Servlet> servletMap;//servlet容器
+    private String staticResourcePath;//静态资源 文件路径
 
 
     /**
@@ -24,13 +25,14 @@ public class TomcatServer {
      * @param context 环境上下文
      * @return TomcatServer对象
      */
-    public static TomcatServer create(int port,String context){
-        return new TomcatServer(port,context);
+    public static TomcatServer create(int port,String context,String staticResourcePath){
+        return new TomcatServer(port,context,staticResourcePath);
     }
 
-    private TomcatServer(int port, String context) {
+    private TomcatServer(int port, String context,String staticResourcePath) {
         this.port = port;
         this.context = context;
+        this.staticResourcePath = staticResourcePath;
     }
     /**
      * 启动apache服务器
@@ -43,7 +45,7 @@ public class TomcatServer {
                 executorService = Executors.newFixedThreadPool(30);//线程池
                 serverSocket = new ServerSocket(port);
                 while (true){
-                    executorService.execute(new Service(serverSocket.accept(),context,servletMappingMap,servletMap));//线程池 执行线程
+                    executorService.execute(new Service(serverSocket.accept(),context,servletMappingMap,servletMap,staticResourcePath));//线程池 执行线程
                 }
             }catch (Exception e) {
                 e.printStackTrace();

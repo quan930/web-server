@@ -30,10 +30,10 @@ public class Test2 {
 //        }
 //        System.out.println("相对url:"+mapping);
 
-        byte b[] = new byte[0];
-        ByteArrayInputStream inputStream = new ByteArrayInputStream(b);
-        inputStream.close();
-        inputStream.close();
+//        byte b[] = new byte[0];
+//        ByteArrayInputStream inputStream = new ByteArrayInputStream(b);
+//        inputStream.close();
+//        inputStream.close();
 
 
         ApacheServer apacheServer = ApacheServer.create(9999, "/","web",(httpExchange)-> {

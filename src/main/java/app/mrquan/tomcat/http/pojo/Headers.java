@@ -24,15 +24,15 @@ public class Headers extends HashMap<String,List<String>> {
     }
     public String format(){
         StringBuilder stringBuilder = new StringBuilder();
-        for ( Entry<String,List<String>> entry:entrySet()){
-            stringBuilder.append(entry.getKey());
+        for (String key:keySet()){
+            stringBuilder.append(key);
             stringBuilder.append(": ");
-            for (int i = 0; i < entry.getValue().size()-1; i++) {
-                stringBuilder.append(entry.getValue().get(i));
+            for (int i = 0; i < get(key).size()-1; i++) {
+                stringBuilder.append(get(key).get(i));
                 stringBuilder.append(", ");
             }
-            stringBuilder.append(entry.getValue().get(entry.getValue().size()-1));
-            stringBuilder.append("\n");
+            stringBuilder.append(get(key).get(get(key).size()-1));
+            stringBuilder.append("\r\n");
         }
         return stringBuilder.toString();
     }

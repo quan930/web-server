@@ -5,6 +5,15 @@ public class ResponseLine {
     private String statusCode;//状态码
     private String reasonPhrase;//原因短语
 
+    public ResponseLine(String version, String statusCode, String reasonPhrase) {
+        this.version = version;
+        this.statusCode = statusCode;
+        this.reasonPhrase = reasonPhrase;
+    }
+
+    public ResponseLine() {
+    }
+
     public String toLine(){
         return version+" "+statusCode+" "+reasonPhrase;
     }
