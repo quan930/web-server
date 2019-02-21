@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f55f147d-90ac-4591-a788-9586ed96a2cd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/TomcatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/TomcatServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/pojo/Headers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/pojo/Headers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/pojo/RequestLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/pojo/RequestLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/pojo/ResponseLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/pojo/ResponseLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/test/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/test/HelloServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/util/NewInstanceRequestResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/util/NewInstanceRequestResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/Test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/Test2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/TomcatTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/TomcatTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/util/StringHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/util/StringHandling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/TestHttp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/mrquan/tomcat/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/mrquan/tomcat/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/mrquan/tomcat/http/pojo/RequestLine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/mrquan/tomcat/http/pojo/RequestLine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/mrquan/tomcat/util/StringHandling.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/mrquan/tomcat/util/StringHandling.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test/TestHttp.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -77,47 +78,52 @@
     <session id="1628811408">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.12" value="2" />
-          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="1" />
-          <entry key="html" value="8" />
-          <entry key="java" value="174" />
-          <entry key="md" value="3" />
-          <entry key="xml" value="8" />
+          <entry key="class" value="5" />
+          <entry key="html" value="10" />
+          <entry key="java" value="259" />
+          <entry key="jsp" value="4" />
+          <entry key="md" value="4" />
+          <entry key="tld" value="1" />
+          <entry key="xml" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="HTML" value="8" />
-          <entry key="JAVA" value="174" />
-          <entry key="Markdown" value="3" />
-          <entry key="XML" value="8" />
+          <entry key="CLASS" value="5" />
+          <entry key="HTML" value="10" />
+          <entry key="JAVA" value="259" />
+          <entry key="JSP" value="4" />
+          <entry key="Markdown" value="4" />
+          <entry key="XML" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="5" />
           <entry key="html" value="1" />
-          <entry key="java" value="8121" />
-          <entry key="md" value="17" />
+          <entry key="java" value="10673" />
+          <entry key="jsp" value="164" />
+          <entry key="md" value="194" />
           <entry key="xml" value="102" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="JAVA" value="8121" />
-          <entry key="Markdown" value="17" />
+          <entry key="JAVA" value="10673" />
+          <entry key="JSP" value="164" />
+          <entry key="Markdown" value="194" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="XML" value="102" />
         </counts>
@@ -129,25 +135,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/Service.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="73" column="50" lean-forward="true" selection-start-line="73" selection-start-column="50" selection-end-line="73" selection-end-column="50" />
+            <state relative-caret-position="-1400">
+              <caret line="36" column="22" lean-forward="true" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
               <folding>
+                <element signature="method#Service#0;class#Service#0" />
+                <element signature="e#4651#4677#0" />
                 <element signature="docComment;method#requestLine#0;class#Service#0" />
+                <element signature="method#requestLine#0;class#Service#0" />
                 <element signature="docComment;method#request#0;class#Service#0" />
+                <element signature="method#request#0;class#Service#0" />
                 <element signature="docComment;method#response#0;class#Service#0" />
+                <element signature="method#response#0;class#Service#0" />
+                <element signature="docComment;method#staticResourceResponse#0;class#Service#0" />
+                <element signature="method#staticResourceResponse#0;class#Service#0" />
+                <element signature="e#10310#10315#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/pojo/ResponseLine.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/Servlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+            <state relative-caret-position="145">
+              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
               <folding>
-                <element signature="e#436#437#0" expanded="true" />
-                <element signature="e#498#499#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -156,8 +169,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/util/FileIO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
+            <state relative-caret-position="10">
               <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/util/JSPParsing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-815">
+              <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -165,7 +190,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/util/NewInstanceRequestResponse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
+            <state relative-caret-position="250">
               <caret line="117" column="76" selection-start-line="117" selection-start-column="76" selection-end-line="117" selection-end-column="76" />
               <folding>
                 <element signature="docComment;class#NewInstanceRequestResponse#0" />
@@ -176,11 +201,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/test/TestHttp.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/util/StringHandling.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            <state relative-caret-position="280">
+              <caret line="44" column="34" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -189,10 +214,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/util/XMLParsing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-260">
+              <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/test/HelloServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+            <state relative-caret-position="175">
+              <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -203,8 +237,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/TomcatServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+            <state relative-caret-position="20">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -212,23 +246,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/pojo/Headers.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/pojo/RequestLine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-              <folding>
-                <element signature="method#toString#0;class#RequestLine#0" />
-              </folding>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="135">
+                <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -240,6 +265,7 @@
       <list>
         <option value="HTML File" />
         <option value="Interface" />
+        <option value="Tag Library Descriptor" />
         <option value="Class" />
       </list>
     </option>
@@ -250,12 +276,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/app/mrquan/Headers.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/mrquan/HttpExchange.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/mrquan/nginx/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/mrquan/nginx/Cache.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/mrquan/nginx/RequestDetails.java" />
-        <option value="$PROJECT_DIR$/www/html/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/app/mrquan/nginx/Callback.java" />
         <option value="$PROJECT_DIR$/src/main/java/test/Test1.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/mrquan/nginx/NginxExchange.java" />
@@ -282,25 +302,31 @@
         <option value="$PROJECT_DIR$/src/main/java/app/mrquan/nginx/Headers.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/mrquan/apache/Headers.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/Headers.java" />
-        <option value="$PROJECT_DIR$/src/main/java/test/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/mrquan/apache/HttpExchange.java" />
         <option value="$PROJECT_DIR$/web/404.html" />
         <option value="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/config/DisplayPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/config/Display.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/util/StringHandling.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/HttpServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/TomcatServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/pojo/ResponseLine.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/util/FileIO.java" />
         <option value="$PROJECT_DIR$/src/main/java/test/TomcatTest.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/test/Test2.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/util/NewInstanceRequestResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/test/HelloServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/Service.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/pojo/Headers.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/pojo/RequestLine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/util/StringHandling.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/jsp/ABC.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/test/pojo/Book.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/test/HelloServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test/JSP.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/Service.java" />
+        <option value="$PROJECT_DIR$/web/as.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/test/TestHttp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/jsp/AsJSP.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/util/JSPParsing.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -406,6 +432,34 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mrquan" type="462c0819:PsiDirectoryNode" />
+              <item name="apache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mrquan" type="462c0819:PsiDirectoryNode" />
+              <item name="nginx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mrquan" type="462c0819:PsiDirectoryNode" />
+              <item name="nginx" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mrquan" type="462c0819:PsiDirectoryNode" />
               <item name="tomcat" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -447,7 +501,28 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mrquan" type="462c0819:PsiDirectoryNode" />
               <item name="tomcat" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mrquan" type="462c0819:PsiDirectoryNode" />
+              <item name="tomcat" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mrquan" type="462c0819:PsiDirectoryNode" />
+              <item name="tomcat" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="web-server" type="b2602c69:ProjectViewProjectNode" />
@@ -476,7 +551,7 @@
               <item name="web-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="web-server" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -523,13 +598,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestHttp">
-    <configuration name="StringHandling" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="app.mrquan.tomcat.util.StringHandling" />
+  <component name="RunManager" selected="Application.TomcatTest">
+    <configuration name="JSP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.JSP" />
       <module name="apache-server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="app.mrquan.tomcat.util.*" />
+          <option name="PATTERN" value="test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -537,12 +612,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.Test" />
-      <module name="apacheserver" />
+    <configuration name="JSPParsing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="app.mrquan.tomcat.util.JSPParsing" />
+      <module name="apache-server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="app.mrquan.nginx.pojo.*" />
+          <option name="PATTERN" value="app.mrquan.tomcat.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -590,19 +665,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Test" />
       <item itemvalue="Application.Test2" />
       <item itemvalue="Application.TomcatTest" />
-      <item itemvalue="Application.StringHandling" />
       <item itemvalue="Application.TestHttp" />
+      <item itemvalue="Application.JSP" />
+      <item itemvalue="Application.JSPParsing" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestHttp" />
         <item itemvalue="Application.TomcatTest" />
+        <item itemvalue="Application.JSPParsing" />
+        <item itemvalue="Application.JSP" />
+        <item itemvalue="Application.TestHttp" />
         <item itemvalue="Application.Test2" />
-        <item itemvalue="Application.StringHandling" />
-        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -631,27 +706,28 @@
       <workItem from="1550077861648" duration="14267000" />
       <workItem from="1550149219320" duration="10028000" />
       <workItem from="1550161658763" duration="4888000" />
-      <workItem from="1550166758500" duration="14830000" />
+      <workItem from="1550166758500" duration="15403000" />
+      <workItem from="1550667361541" duration="21034000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135643000" />
+    <option name="totallyTimeSpent" value="157250000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Web" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.6386233" visible="true" weight="0.25035766" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.6386233" visible="true" weight="0.28683835" />
       <window_info id="Structure" order="2" sideWeight="0.36137667" side_tool="true" weight="0.2360515" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Java Enterprise" order="0" />
+      <window_info anchor="bottom" id="Java Enterprise" order="0" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.28433734" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.2807229" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -661,7 +737,6 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32891566" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3297568" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -669,6 +744,7 @@
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Coverage" order="7" side_tool="true" weight="0.3297568" />
     </layout>
     <layout-to-restore>
       <window_info id="Web" order="0" side_tool="true" />
@@ -706,94 +782,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/net/SocketInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="209" selection-start-line="209" selection-end-line="209" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/Test1.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/apache/HttpHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/nginx/Callback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/javax/xml/parsers/DocumentBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="195" column="19" selection-start-line="195" selection-start-column="11" selection-end-line="195" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/org/w3c/dom/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1597">
-          <caret line="164" column="17" selection-start-line="164" selection-start-column="17" selection-end-line="164" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/org/w3c/dom/Document.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="55" column="36" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/HttpServletRequest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/ADFG.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/Test.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/nginx/pojo/RequestDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/nginx/pojo/RequestLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding>
-            <element signature="e#234#235#0" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/nginx/NginxExchange.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="91" column="24" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#requestHeaders#0;class#NginxExchange#0" />
-            <element signature="method#requestHeaders#0;class#NginxExchange#0" />
-            <element signature="docComment;method#requestEntityBody#0;class#NginxExchange#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/nginx/NginxServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="58" selection-start-line="46" selection-start-column="58" selection-end-line="46" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Maven/repository/org/json/json/20180813/json-20180813.jar!/org/json/JSONObject.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-18">
@@ -829,10 +817,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/web/404.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="41" lean-forward="true" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+        <state relative-caret-position="90">
+          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/io/OutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/lang/Runnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/hi.tld" />
+    <entry file="file://$PROJECT_DIR$/web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -843,57 +853,175 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/nginx/Headers.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/test/Test2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/config/DisplayPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="156" selection-start-line="4" selection-start-column="156" selection-end-line="4" selection-end-column="156" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/util/StringHandling.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+        <state relative-caret-position="525">
+          <caret line="35" column="30" lean-forward="true" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/util/XMLParsing.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-202">
-          <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+        <state relative-caret-position="135">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/Servlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/jsp/ABC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        <state relative-caret-position="75">
+          <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/javax/tools/Tool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="62" column="84" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/jsp/AsJSP.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/app/mrquan/tomcat/jsp/AsJSP.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test/TestHttp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test/JSP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="78" column="18" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/as.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test/TomcatTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/apache/ApacheServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-425">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/apache/Headers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/apache/HttpExchange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5">
+          <caret line="201" column="10" selection-start-line="201" selection-start-column="10" selection-end-line="201" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7367#7368#0" expanded="true" />
+            <element signature="e#7437#7438#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/apache/HttpHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/nginx/Callback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/nginx/Headers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-35">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/nginx/NginxExchange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-530">
+          <caret line="91" column="24" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#requestHeaders#0;class#NginxExchange#0" />
+            <element signature="method#requestHeaders#0;class#NginxExchange#0" />
+            <element signature="docComment;method#requestEntityBody#0;class#NginxExchange#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/nginx/NginxServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="46" column="58" selection-start-line="46" selection-start-column="58" selection-end-line="46" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/nginx/pojo/RequestDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/nginx/pojo/RequestLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+          <folding>
+            <element signature="e#234#235#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -905,16 +1033,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/HttpServletResponse.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/pojo/Headers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+        <state relative-caret-position="100">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/pojo/ResponseLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5">
+          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding>
+            <element signature="e#436#437#0" expanded="true" />
+            <element signature="e#498#499#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/pojo/RequestLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-65">
+          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/HttpServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
+        <state relative-caret-position="-65">
           <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -924,113 +1070,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/HttpServletRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
+        <state relative-caret-position="-380">
           <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/io/OutputStream.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/HttpServletResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+        <state relative-caret-position="-65">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/apache/ApacheServer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/jsp/AsJSP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-296">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="39" />
+        <state relative-caret-position="190">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/TomcatTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/test/pojo/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="15">
-            <caret line="1" column="91" lean-forward="true" selection-start-line="1" selection-start-column="91" selection-end-line="1" selection-end-column="91" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/apache/Headers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/apache/HttpExchange.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="201" column="10" selection-start-line="201" selection-start-column="10" selection-end-line="201" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7367#7368#0" expanded="true" />
-            <element signature="e#7437#7438#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/Test2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="35" column="30" lean-forward="true" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/pojo/RequestLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-          <folding>
-            <element signature="method#toString#0;class#RequestLine#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/pojo/ResponseLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding>
-            <element signature="e#436#437#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/http/pojo/Headers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="180">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/test/HelloServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+        <state relative-caret-position="175">
+          <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1039,14 +1108,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/util/FileIO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
+        <state relative-caret-position="10">
           <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/util/JSPParsing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-815">
+          <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/util/NewInstanceRequestResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
+        <state relative-caret-position="250">
           <caret line="117" column="76" selection-start-line="117" selection-start-column="76" selection-end-line="117" selection-end-column="76" />
           <folding>
             <element signature="docComment;class#NewInstanceRequestResponse#0" />
@@ -1056,42 +1135,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/Service.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/util/StringHandling.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="73" column="50" lean-forward="true" selection-start-line="73" selection-start-column="50" selection-end-line="73" selection-end-column="50" />
+        <state relative-caret-position="280">
+          <caret line="44" column="34" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
           <folding>
-            <element signature="docComment;method#requestLine#0;class#Service#0" />
-            <element signature="docComment;method#request#0;class#Service#0" />
-            <element signature="docComment;method#response#0;class#Service#0" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/lang/Runnable.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/util/XMLParsing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+        <state relative-caret-position="-260">
+          <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1400">
+          <caret line="36" column="22" lean-forward="true" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <folding>
+            <element signature="method#Service#0;class#Service#0" />
+            <element signature="e#4651#4677#0" />
+            <element signature="docComment;method#requestLine#0;class#Service#0" />
+            <element signature="method#requestLine#0;class#Service#0" />
+            <element signature="docComment;method#request#0;class#Service#0" />
+            <element signature="method#request#0;class#Service#0" />
+            <element signature="docComment;method#response#0;class#Service#0" />
+            <element signature="method#response#0;class#Service#0" />
+            <element signature="docComment;method#staticResourceResponse#0;class#Service#0" />
+            <element signature="method#staticResourceResponse#0;class#Service#0" />
+            <element signature="e#10310#10315#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/Servlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/mrquan/tomcat/TomcatServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        <state relative-caret-position="20">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/TestHttp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="135">
+            <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

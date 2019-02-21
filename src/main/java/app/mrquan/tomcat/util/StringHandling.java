@@ -33,4 +33,15 @@ public class StringHandling {
         cs[0]-=32;
         return "do"+String.valueOf(cs);
     }
+
+    /**
+     * 首字母大写
+     * @param s 需要格式化的字符串
+     * @return string
+     */
+    public static String captureName(String s) {
+        char[] cs=s.toCharArray();
+        cs[0]-=32;
+        return String.valueOf(cs);
+    }
 }

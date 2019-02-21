@@ -7,8 +7,10 @@ import app.mrquan.tomcat.http.pojo.Headers;
 import app.mrquan.tomcat.http.pojo.RequestLine;
 import app.mrquan.tomcat.http.pojo.ResponseLine;
 import app.mrquan.tomcat.util.FileIO;
+import app.mrquan.tomcat.util.JSPParsing;
 import app.mrquan.tomcat.util.NewInstanceRequestResponse;
 
+import javax.tools.ToolProvider;
 import java.io.*;
 import java.net.Socket;
 import java.util.Map;
@@ -36,44 +38,70 @@ public class Service implements Runnable {
         try {
             in = socket.getInputStream();
             out = new BufferedOutputStream(socket.getOutputStream());
-            RequestLine requestLine = requestLine();//读取请求行
-//            System.out.println("..................."+requestLine);
+            //读取请求行
+            RequestLine requestLine = requestLine();
+            System.out.println("请求行信息:"+requestLine);
+            //请求资源
             String className = servletMappingMap.get(requestLine.getClassName());
-            if (className==null||requestLine.getRequestURL().indexOf(context)!=0){//不含有servlet，或者不是以context开头
-                /**
-                 * 404
-                 */
-                ResponseLine responseLine = null;
-                Headers responseHeaders = null;
-                byte[] responseEntityBody = null;
-                File file = new File(staticResourcePath+requestLine.getClassName());
-                if (file.isDirectory()){
-                    file = new File(staticResourcePath+requestLine.getClassName()+"/index.html");
+            //不含有servlet，或者不是以context开头
+            if (className==null||requestLine.getRequestURL().indexOf(context)!=0){
+                //判断jsp
+                if (requestLine.getClassName().endsWith(".jsp") &&requestLine.getRequestURL().indexOf(context)==0){
+                    File file = new File(staticResourcePath+requestLine.getClassName());
+                    //判断jsp文件 是否存在
+                    if (file.isFile()){
+                        //判断jsp 是否已经实例化
+                        if (servletMap.get(requestLine.getClassName())==null){
+                            //生成.java 文件
+                            String javaFileName = JSPParsing.jspToJAVAFile(requestLine.getClassName());
+                            //编译Java文件
+                            if (JSPParsing.compilerJavaFile(javaFileName,"target/classes/")){
+                                System.out.println("....................编译成功");
+                            }
+                            //实例化servlet
+                            Servlet servlet = Class.forName("app.mrquan.tomcat.jsp."+javaFileName.substring(javaFileName.lastIndexOf("/")+1,javaFileName.indexOf(".java"))).asSubclass(Servlet.class).newInstance();
+                            //servlet初始化
+                            servlet.init();
+                            //放入servlet容器
+                            servletMap.put(requestLine.getClassName(),servlet);
+                        }
+                        //请求首部
+                        Headers requestHeaders = new Headers();
+                        //请求报文
+                        byte[] requestEntityBody;
+                        //读取报文首部和报文实体
+                        requestEntityBody = request(requestHeaders);
+                        //创建 请求对象
+                        HttpServletRequest httpServletRequest = NewInstanceRequestResponse.createHttpServletRequest(context,requestLine,requestHeaders,requestEntityBody);
+                        //响应行
+                        ResponseLine responseLine = new ResponseLine();
+                        //响应首部
+                        Headers responseHeaders = new Headers();
+                        //内存流
+                        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+                        //创建 响应对象
+                        HttpServletResponse httpServletResponse = NewInstanceRequestResponse.createHttpServletResponse(responseLine,responseHeaders,outputStream);
+                        //执行service()方法
+                        servletMap.get(requestLine.getClassName()).service(httpServletRequest,httpServletResponse);
+                        //设置响应
+                        response(responseLine,responseHeaders,httpServletRequest.getInputStream(),outputStream);
+                    }else {
+                        //404资源响应
+                        staticResourceResponse(requestLine);
+                    }
+                }else {
+                    //静态资源响应
+                    staticResourceResponse(requestLine);
                 }
-                if (file.exists()){//判断请求是否存在
-                    responseLine = new ResponseLine("HTTP/1.0","200","OK");
-                    responseHeaders = new Headers();
-                    responseHeaders.add("Content-Length",String.valueOf(file.length()));
-                    responseEntityBody = FileIO.getBytes(file);
-                }else {//404
-//                    System.out.println("文件不存在"+file);
-//                    System.out.println(requestLine);
-                    responseLine = new ResponseLine("HTTP/1.0","404","Not Found");
-                    responseHeaders = new Headers();
-                    responseHeaders.add("Content-Length",String.valueOf(DisplayPage.Code404.getBytes().length));
-                    responseEntityBody = DisplayPage.Code404.getBytes();
-                }
-                out.write(responseLine.toLine().getBytes());
-                out.write("\r\n".getBytes());
-                out.write(responseHeaders.format().getBytes());
-                out.write("\r\n".getBytes());
-                out.write(responseEntityBody);
-                out.flush();
-            }else {//servlet逻辑
-//                System.out.println(requestLine);
-                if (servletMap.get(className)==null){//容器中没有指定servlet
+            }else {//servlet逻辑 || 已经实例化完毕的jsp
+                //判断servlet是否实例化完毕 (容器中没有指定servlet)
+                if (servletMap.get(className)==null){
+                    //实例化servlet
+                    System.out.println("servlet::::"+className);
                     Servlet servlet = Class.forName(className).asSubclass(Servlet.class).newInstance();
+                    //servlet初始化
                     servlet.init();
+                    //放入servlet容器
                     servletMap.put(className,servlet);
                 }
                 //请求首部
@@ -190,6 +218,41 @@ public class Service implements Runnable {
         out.write(responseHeaders.format().getBytes());
         out.write("\r\n".getBytes());
         out.write(outputStream.toByteArray());
+        out.flush();
+    }
+
+    /**
+     * 设置静态资源响应
+     * @param requestLine 请求行
+     * @throws IOException io异常
+     */
+    private void staticResourceResponse(RequestLine requestLine) throws IOException {
+        ResponseLine responseLine = null;
+        Headers responseHeaders = null;
+        byte[] responseEntityBody = null;
+        //路径格式化
+        File file = new File(staticResourcePath+requestLine.getClassName());
+        if (file.isDirectory()){
+            file = new File(staticResourcePath+requestLine.getClassName()+"/index.html");
+        }
+        if (file.exists()){//判断请求是否存在
+            responseLine = new ResponseLine("HTTP/1.0","200","OK");
+            responseHeaders = new Headers();
+            responseHeaders.add("Content-Length",String.valueOf(file.length()));
+            responseEntityBody = FileIO.getBytes(file);
+        }else {//404
+//                    System.out.println("文件不存在"+file);
+//                    System.out.println(requestLine);
+            responseLine = new ResponseLine("HTTP/1.0","404","Not Found");
+            responseHeaders = new Headers();
+            responseHeaders.add("Content-Length",String.valueOf(DisplayPage.Code404.getBytes().length));
+            responseEntityBody = DisplayPage.Code404.getBytes();
+        }
+        out.write(responseLine.toLine().getBytes());
+        out.write("\r\n".getBytes());
+        out.write(responseHeaders.format().getBytes());
+        out.write("\r\n".getBytes());
+        out.write(responseEntityBody);
         out.flush();
     }
 }

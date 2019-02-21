@@ -44,8 +44,7 @@ public class RequestLine {
         return "RequestLine{" +
                 "method='" + method + '\'' +
                 ", requestURL='" + requestURL + '\'' +
-                ", className='" + className + '\'' +
-                ", simpleRUL='" + simpleRUL + '\'' +
+                ", relativeURL='" + className + '\'' +
                 ", version='" + version + '\'' +
                 '}';
     }
